@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ali GÖREN</title>
+    <title>İletişim</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -41,13 +41,16 @@
                 <a class="brand" href="/">Ali GÖREN</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active">
+                        <li>
                             <a href="/">Anasayfa</a>
+                        </li>
+                        <li>
+                            <a href="/posts">Yazılar</a>
                         </li>
                         <li>
                             <a href="/about">Hakkımda</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/contact">İletişim</a>
                         </li>
                     </ul>
@@ -57,15 +60,12 @@
         </div>
     </div>
     <div class="container-fluid">
-        {% if username %}
-        <h1>Merhaba {{ username }}</h1>
-
-        <p>{{ username }} naber?</p>
-        {% else %}
-        <h1>Merhaba hoşgeliniz</h1>
-
-        <p>Nasılsınız?</p>
-        {% endif %}
+        <h1>İletişim</h1>
+        <p>Blog: <a href="http://aligoren.github.io" target="_blank">Ali GÖREN</a></p>
+        <p>Github: <a href="https://github.com/aligoren" target="_blank">Ali GÖREN</a></p>
+        <p>Twitter: <a href="https://twitter.com/yazilimci_adam" target="_blank">Ali GÖREN</a></p>
+        <p>Facebook: <a href="http://fb.com/aligren" target="_blank">Ali GÖREN</a></p>
+        <p>Mail: <a href="mailto:goren.ali@yandex.com">goren.ali@yandex.com</a></p>
     </div>
     <!-- /container -->
     <!-- Placed at the end of the document so the pages load faster -->

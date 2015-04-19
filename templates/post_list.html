@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ali GÖREN</title>
+    {% for entry in entries %}
+    <title>{{ entry.title }} | Ali GÖREN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -41,10 +42,10 @@
                 <a class="brand" href="/">Ali GÖREN</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active">
+                        <li>
                             <a href="/">Anasayfa</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="/posts">Yazılar</a>
                         </li>
                         <li>
@@ -62,11 +63,10 @@
     <div class="container-fluid">
         <h1>Son Yazılar</h1>
         <ul>
-        {% for entry in entries %}
-        <li><h3><a href="/posts/{{ entry.id }}">{{ entry.title }}</a></h3></li>
+        <li><h3>{{ entry.title }}</h3></li>
         {{ entry.text|safe }}
         {% else %}
-        <em>Henüz Bir Yazı Eklemedim</em>
+         {% include 'error.html' %}
         {% endfor %}
         </ul>
     </div>
